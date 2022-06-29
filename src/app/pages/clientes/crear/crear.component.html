@@ -1,0 +1,84 @@
+<div class="card mt-3">
+    <div class="card-header text-center bg-dark text-white">
+        <h1>
+            <i class="bi bi-person-plus-fill"></i> Nuevo clientes
+        </h1>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-8">
+                <label for="">Nombre*</label>
+                <div>
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre" [(ngModel)]="cliente.nombre" required>
+                </div>
+            </div>
+            <div class="col-4">
+                <label for="">Correo*</label>
+                <div>
+                    <input type="text" class="form-control" name="correo" placeholder="Correo" [(ngModel)]="cliente.correo" required>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <h3>Dirección</h3>
+            </div>
+            <div class="col-4 mt-1 mb-1">
+                Calle
+                <div>
+                    <input type="text" class="form-control" name="calle" placeholder="Calle" [(ngModel)]="cliente.direccion.calle">
+                </div>
+            </div>
+            <div class="col-4  mt-1 mb-1">
+                Entre calles
+                <div>
+                    <input type="text" class="form-control" name="entreCalles" placeholder="Entre calles" [(ngModel)]="cliente.direccion.entreCalles">
+                </div>
+            </div>
+            <div class="col-4  mt-1 mb-1">
+                Código postal
+                <div>
+                    <input type="number" class="form-control" name="codigoPostal" placeholder="Código postal" [(ngModel)]="cliente.direccion.codigoPostal">
+                </div>
+            </div>
+            <div class="col-4  mt-1 mb-1">
+                Colonia
+                <div>
+                    <input type="text" class="form-control" name="colonia" placeholder="Colonia" [(ngModel)]="cliente.direccion.colonia">
+                </div>
+            </div>
+            <div class="col-8  mt-1 mb-1">
+                Referencia
+                <div>
+                    <input type="text" class="form-control" name="referencia" placeholder="Referencia" [(ngModel)]="cliente.direccion.referencia">
+                </div>
+            </div>
+            <div class="col-4  mt-1 mb-1">
+                Ciudad
+                <div>
+                    <input type="text" class="form-control" name="ciudad" placeholder="Ciudad" [(ngModel)]="cliente.direccion.ciudad">
+                </div>
+            </div>
+            <div class="col-4  mt-1 mb-1">
+                Estado
+                <div>
+                    <input type="text" class="form-control" name="estado" placeholder="Estado" [(ngModel)]="cliente.direccion.estado">
+                </div>
+            </div>
+            <div class="col-4  mt-1 mb-1">
+                Pais
+                <div>
+                    <input type="text" class="form-control" name="pais" placeholder="País" [(ngModel)]="cliente.direccion.pais">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12 mt-3">
+                <!-- <button type="button" class="btn btn-outline-success btn-sm col-12" (click)="crearCliente(nombre,apellido,correo)">Guardar</button> -->
+                <button type="button" class="btn btn-outline-success btn-sm col-12" (click)="crearCliente()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="row mb-3">
+    <div class="col-6 mb-3">
+        <label class="b">Descripción</label>
+        <div>
+            <input type="text" class="form-control" name="descripcion" placeholder="Descripcion" [(ngModel)]="trato.descripcion" required>
+        </div>
+    </div>
+    <div class="col-2 mb-3">
+        <label for="">Precio</label>
+        <div>
+            <input type="number" class="form-control" name="precio" [(ngModel)]="trato.precio" (change)="getTotal($event)" required>
+        </div>
+    </div>
+    <div class="col-2 mb-3">
+        <label for="">Cantidad</label>
+        <div>
+            <input type="number" class="form-control" name="cantidad" [(ngModel)]="trato.cantidad" (change)="getTotal($event)" required>
+        </div>
+    </div>
+    <div class="col-2 mb-3">
+        <label for="">Total</label>
+        <div>
+            <input type="number" class="form-control" name="total"  [(ngModel)]="trato.total" required>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row mt-3">
+    <div class="col-6 d-grid mx-auto">
+        <button type="button" class="btn btn-outline-success" (click)="guardar()"><i class="bi bi-save"></i> Guardar</button>
+    </div>
+    <div class="col-6 d-grid mx-auto">
+        <button type="button" class="btn btn-outline-danger" (click)="cancelar()"><i class="bi bi-x-lg"></i> Cancelar</button> 
+    </div>
+</div>
+

@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CRM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link"  aria-current="page" (click)="goToList()">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  (click)="goToAddClient()">Agregar cliente</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+          <a class="btn btn-outline-light" aria-current="page" (click)="goToLogin()" *ngIf="!isAutenticado()">Iniciar sesion</a>
+          <a class="btn btn-outline-secondary" aria-current="page" *ngIf="isAutenticado()" (click)="salir()">Salir</a>
+      </span>
+    </div>
+  </div>
+</nav>
+<!-- {{currentPage}} -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
